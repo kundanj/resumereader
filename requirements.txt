@@ -1,0 +1,5 @@
+PyPDF4
+pdfminer.six
+pandas
+python-dotenv
+streamlit
