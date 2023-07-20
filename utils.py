@@ -1,8 +1,10 @@
 import re
 
 techmeta = {
-"java" : set(['java','j2ee','weblogic','websphere']),
+"java" : set(['java','j2ee','weblogic','websphere','spring boot','hibernate','junit']),
 "database" : set(['sql','db2','cassandra','mysql','postgresql','sql server','hadoop','dynamodb','oracle']),
+"ci-cd" : set(['docker','k8','kubernetes','git','github','circleci','jenkins', 'travis ci']),
+"cloud" : set(['azure','aws','ec2','serverless','lambda','gcp']),
 "mearnstack" : set(['nodejs','javascript','reactjs','angular','angularjs','jquery','bootstrap','expressjs']),
 "unix" : set(['unix','vmware','perl','linux','bash','shell script','hp-ux', 'solaris']),
 "datascience" : set(['data science','spacy','nltk','tensorflow','open.ai','streamlit','huggingface','scikit-learn','scikit','pandas','keras','spark','kafka']),
@@ -41,6 +43,12 @@ def categorize_tech(workhistory):
                 if "pythonstack" not in techslog and tech in techmeta["pythonstack"]:
                     techslog.append(("pythonstack", job["days"]))
                     techlogset.add("pythonstack")
+                if "ci-cd" not in techslog and tech in techmeta["ci-cd"]:
+                    techslog.append(("ci-cd", job["days"]))
+                    techlogset.add("ci-cd")
+                if "cloud" not in techslog and tech in techmeta["cloud"]:
+                    techslog.append(("cloud", job["days"]))
+                    techlogset.add("cloud")
         for x in techslog:
             if x[0] in techs_set:
                 tech_matrix[x[0]] = tech_matrix[x[0]] + x[1]
