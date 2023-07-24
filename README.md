@@ -1,2 +1,2 @@
 # resumereader
-Streamlit based UI for resume/CV parsing
+Simple streamlit based UI (only) for resume/CV parsing
