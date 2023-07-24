@@ -8,6 +8,34 @@ from pdfminer.high_level import extract_text
 API_ENDPOINT = st.secrets["api_url"]
 API_KEY = st.secrets["api_key"]
 
+footer="""<style>
+a:link , a:visited{
+color: blue;
+background-color: transparent;
+text-decoration: underline;
+}
+
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Made with elan by disruptive.dna@gmail.com </p>
+</div>
+"""
+
 def format_response(response):
     tech_cats=None
     if "workhistory" in response:
@@ -37,7 +65,7 @@ def display_response(response, cats):
 def display_dashboard():
     st.title("Résumé Parser")
     st.write("The most incisive and insightful CV parser. Powered with low footprint NLP and Streamlit!")
-    uploaded_file = st.file_uploader("Choose a résumé to parse")
+    uploaded_file = st.file_uploader("Choose a résumé to parse(only PDFs for now)")
     if uploaded_file:
         with st.spinner("Please wait"):
             cvtext = extract_text(uploaded_file)
@@ -48,5 +76,6 @@ def display_dashboard():
                 cats = format_response(resp)
                 display_response(resp,cats)
             #print('data is .....',data)
+    st.markdown(footer,unsafe_allow_html=True)
 
 display_dashboard()
