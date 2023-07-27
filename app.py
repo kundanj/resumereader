@@ -63,7 +63,6 @@ def display_response(response, cats):
 
 
 def display_dashboard():
-    st.title("Résumé Parser")
     st.write("The most incisive and insightful CV parser. Powered with low footprint NLP and Streamlit!")
     uploaded_file = st.file_uploader("Choose a résumé to parse(only PDFs for now)")
     if uploaded_file:
@@ -78,4 +77,7 @@ def display_dashboard():
             #print('data is .....',data)
     st.markdown(footer,unsafe_allow_html=True)
 
+#st.header("CV Parser")
+st.set_page_config(page_title="CV Parser")
+st.header("Résumé Parser")
 display_dashboard()
