@@ -25,28 +25,28 @@ def categorize_tech(workhistory):
                 if "java" not in techlogset and tech in techmeta["java"]:
                     techslog.append(("java", job["days"]))
                     techlogset.add("java")
-                if "datascience" not in techslog and tech in techmeta["datascience"]:
+                if "datascience" not in techlogset and tech in techmeta["datascience"]:
                     techslog.append(("datascience", job["days"]))
                     techlogset.add("datascience")
-                if "mearnstack" not in techslog and tech in techmeta["mearnstack"]:
+                if "mearnstack" not in techlogset and tech in techmeta["mearnstack"]:
                     techslog.append(("mearnstack", job["days"]))
                     techlogset.add("mearnstack")
-                if "database" not in techslog and tech in techmeta["database"]:
+                if "database" not in techlogset and tech in techmeta["database"]:
                     techslog.append(("database", job["days"]))
                     techlogset.add("database")
-                if "unix" not in techslog and tech in techmeta["unix"]:
+                if "unix" not in techlogset and tech in techmeta["unix"]:
                     techslog.append(("unix", job["days"]))
                     techlogset.add("unix")
-                if "busi-intel" not in techslog and tech in techmeta["busi-intel"]:
+                if "busi-intel" not in techlogset and tech in techmeta["busi-intel"]:
                     techslog.append(("busi-intel", job["days"]))
                     techlogset.add("busi-intel")
-                if "pythonstack" not in techslog and tech in techmeta["pythonstack"]:
+                if "pythonstack" not in techlogset and tech in techmeta["pythonstack"]:
                     techslog.append(("pythonstack", job["days"]))
                     techlogset.add("pythonstack")
-                if "ci-cd" not in techslog and tech in techmeta["ci-cd"]:
+                if "ci-cd" not in techlogset and tech in techmeta["ci-cd"]:
                     techslog.append(("ci-cd", job["days"]))
                     techlogset.add("ci-cd")
-                if "cloud" not in techslog and tech in techmeta["cloud"]:
+                if "cloud" not in techlogset and tech in techmeta["cloud"]:
                     techslog.append(("cloud", job["days"]))
                     techlogset.add("cloud")
         for x in techslog:
