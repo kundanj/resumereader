@@ -5,6 +5,9 @@ import streamlit as st
 from utils import categorize_tech
 from pdfminer.high_level import extract_text
 
+st.set_page_config(page_title="CV Parser")
+st.header("Résumé Parser")
+
 API_ENDPOINT = st.secrets["api_url"]
 API_KEY = st.secrets["api_key"]
 
@@ -78,6 +81,4 @@ def display_dashboard():
     st.markdown(footer,unsafe_allow_html=True)
 
 #st.header("CV Parser")
-st.set_page_config(page_title="CV Parser")
-st.header("Résumé Parser")
 display_dashboard()
