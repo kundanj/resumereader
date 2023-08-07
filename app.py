@@ -73,6 +73,7 @@ def display_dashboard():
             cvtext = extract_text(uploaded_file)
             data = { "api_key": API_KEY, "cv_text": cvtext }
             resp = requests.post(url = API_ENDPOINT,json = data)
+            #print('resp.............',resp, resp.status_code, resp.json())
             if resp.status_code == 200:
                 resp = resp.json()
                 cats = format_response(resp)
@@ -81,4 +82,7 @@ def display_dashboard():
     st.markdown(footer,unsafe_allow_html=True)
 
 #st.header("CV Parser")
-display_dashboard()
+try:
+    display_dashboard()
+except requests.exceptions.RequestException as e:
+    st.error('Sorry! there seems to be an error in calling parsing API')
