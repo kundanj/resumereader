@@ -1,10 +1,10 @@
+import streamlit as st
 st.set_page_config(page_title="CV Parser")
 st.header("Résumé Parser")
 
 import json
 import requests
 import pandas as pd
-import streamlit as st
 from utils import categorize_tech
 from pdfminer.high_level import extract_text
 
