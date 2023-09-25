@@ -49,6 +49,9 @@ def categorize_tech(workhistory):
                 if "cloud" not in techlogset and tech in techmeta["cloud"]:
                     techslog.append(("cloud", job["days"]))
                     techlogset.add("cloud")
+                if "microsoft" not in techlogset and tech in techmeta["microsoft"]:
+                    techslog.append(("microsoft", job["days"]))
+                    techlogset.add("microsoft")
         for x in techslog:
             if x[0] in techs_set:
                 tech_matrix[x[0]] = tech_matrix[x[0]] + x[1]
