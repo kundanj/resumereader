@@ -36,6 +36,7 @@ text-align: center;
 </style>
 <div class="footer">
 <p>Made with elan by disruptive.dna@gmail.com </p>
+<p><small>Privacy Notice: No resume data is used for marketing, advertising or sold to 3rd parties or for any other purpose whatsoever. No resume files are stored by parsing server. Detailed policy will follow. </small></p>
 </div>
 """
 
