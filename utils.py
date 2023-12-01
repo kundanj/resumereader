@@ -1,17 +1,18 @@
 import re
 
 techmeta = {
-"java" : set(['java','j2ee','weblogic','websphere','spring boot','hibernate','junit']),
-"database" : set(['sql','db2','cassandra','mysql','postgresql','sql server','hadoop','dynamodb','oracle']),
-"ci-cd" : set(['docker','k8','kubernetes','git','github','circleci','jenkins', 'travis ci']),
-"cloud" : set(['azure','aws','ec2','serverless','lambda','gcp']),
+"java" : set(['java','j2ee','weblogic','websphere']),
+"data-pipelines" : set(['apache spark','hadoop','pyspark','hive','sqoop','kafka']),
+"database" : set(['sql','db2','cassandra','mysql','postgresql','sql server','dynamodb','oracle']),
 "mearnstack" : set(['nodejs','javascript','reactjs','angular','angularjs','jquery','bootstrap','expressjs']),
 "unix" : set(['unix','vmware','perl','linux','bash','shell script','hp-ux', 'solaris']),
-"datascience" : set(['data science','spacy','nltk','tensorflow','open.ai','streamlit','huggingface','scikit-learn','scikit','pandas','keras','spark','kafka']),
+"datascience" : set(['data science','spacy','nltk','tensorflow','open.ai','streamlit','huggingface','scikit-learn','scikit','pandas','keras','spark','kafka','machine learning']),
 "pythonstack":set(['python','pandas','scrapy']),
 "busi-intel" : set(['informatica','tableau']),
+"cloud" : set(['amazon redshift','aws ec2','aws lambda','sagemaker', 'aws dynamodb', 'google cloud', 'amazon eks']),
 "microsoft":set(['cobol','ado','azure','microsoft visual','c#','asp','windows','.net','visual basic','intellij','visual studio', 'crystal reports', 'business basic','ms sql server'])
   }
+
 
 
 def categorize_tech(workhistory):
