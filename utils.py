@@ -9,6 +9,7 @@ techmeta = {
 "datascience" : set(['data science','spacy','nltk','tensorflow','open.ai','streamlit','huggingface','scikit-learn','scikit','pandas','keras','spark','kafka','machine learning']),
 "pythonstack":set(['python','pandas','scrapy']),
 "busi-intel" : set(['informatica','tableau']),
+"ci-cd" : set(['jenkins','github','ansible','circleci','travisci','gitlab','bitbucket','teamcity','devops']),
 "cloud" : set(['amazon redshift','aws ec2','aws lambda','sagemaker', 'aws dynamodb', 'google cloud', 'amazon eks']),
 "microsoft":set(['cobol','ado','azure','microsoft visual','c#','asp','windows','.net','visual basic','intellij','visual studio', 'crystal reports', 'business basic','ms sql server'])
   }
@@ -53,6 +54,9 @@ def categorize_tech(workhistory):
                 if "microsoft" not in techlogset and tech in techmeta["microsoft"]:
                     techslog.append(("microsoft", job["days"]))
                     techlogset.add("microsoft")
+                if "data-pipelines" not in techlogset and tech in techmeta["data-pipelines"]:
+                    techslog.append(("data-pipelines", job["days"]))
+                    techlogset.add("data-pipelines")
         for x in techslog:
             if x[0] in techs_set:
                 tech_matrix[x[0]] = tech_matrix[x[0]] + x[1]
